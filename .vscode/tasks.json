@@ -16,7 +16,7 @@
 				"/home/beloblotskiy/llama.cpp/ggml/include",
 				"-L",
 				"/home/beloblotskiy/llama.cpp/build/bin",
-				"-lllma",
+				"-lllama",
 				"-ldl",
 				"-pthread"
 			],
@@ -40,7 +40,7 @@
 				"clear": false
 			},
 			"type": "shell",
-			"command": "${fileDirname}/${fileBasenameNoExtension}",
+			"command": "export LD_LIBRARY_PATH=/home/beloblotskiy/llama.cpp/build/bin:$LD_LIBRARY_PATH && ${fileDirname}/${fileBasenameNoExtension}",
 			"args": [],
 			"group": {
 				"kind": "build",

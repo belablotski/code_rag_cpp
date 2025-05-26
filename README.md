@@ -24,7 +24,7 @@ Update GCC build task:
 				"/home/beloblotskiy/llama.cpp/ggml/include",
 				"-L",
 				"/home/beloblotskiy/llama.cpp/build/bin",
-				"-lllma",
+				"-lllama",
 				"-ldl",
 				"-pthread"
 ```
