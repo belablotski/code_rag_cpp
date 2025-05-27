@@ -18,6 +18,9 @@ make clean
 make
 ```
 
+Since I had contstant problems with libggml_backend.so, I've ended up with downloading pre-built binaries from
+https://github.com/ggml-org/llama.cpp/releases/download/b5501/llama-b5501-bin-ubuntu-x64.zip
+
 Update GCC build task:
 
 ```
@@ -32,9 +35,14 @@ Update GCC build task:
 				"/home/beloblotskiy/llama.cpp/ggml/include",
 				"-L",
 				"/home/beloblotskiy/llama.cpp/build/bin",
+				"-L",
+				"/home/beloblotskiy/code_rag_cpp/llama_bin",
 				"-lllama",
+				"-lggml-base",
+				"-lggml",
 				"-ldl",
 				"-pthread"
+			]
 ```
 
 ## Download LLM
@@ -42,3 +50,12 @@ Update GCC build task:
 ```
 wget https://huggingface.co/TheBloke/CodeLlama-7B-GGUF/resolve/main/codellama-7b.Q4_K_M.gguf
 ```
+
+## Run simple inferencing
+
+```
+./inf_simple_test -m codellama-7b.Q4_K_M.gguf -n 200 'c++ bubble sort'
+```
+
+![Simple Inferencing](docs/images/simple_inferencing.png)
+
