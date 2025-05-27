@@ -1,4 +1,8 @@
 main
+inf_simple_test
+
+llama_bin/
+examples/
 
 *.gguf
 

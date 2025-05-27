@@ -4,10 +4,18 @@
 
 1. https://github.com/ggml-org/llama.cpp?tab=readme-ov-file#building-the-project
 2. Build locally https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md
+3. Or download release zip from https://github.com/ggml-org/llama.cpp/releases
 
 ```
 cmake -B build
 cmake --build build --config Release
+```
+
+or
+
+```
+make clean
+make
 ```
 
 Update GCC build task:
